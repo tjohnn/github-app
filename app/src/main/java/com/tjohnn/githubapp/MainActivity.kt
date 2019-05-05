@@ -1,4 +1,4 @@
-package com.tjohnn.loginapp
+package com.tjohnn.githubapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

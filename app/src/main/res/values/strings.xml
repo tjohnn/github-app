@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">LoginApp</string>
+    <string name="search_repo_name">Search repo name</string>
 </resources>
