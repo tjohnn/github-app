@@ -23,7 +23,7 @@ class SearchViewModel(
     private var lastSearch = ""
     private var currentPage = 1
 
-    fun searchRepoName(search: String){
+    fun searchRepoByName(search: String){
         if(search.isEmpty()) return
 
         currentPage = if(lastSearch == search) currentPage + 1 else 1

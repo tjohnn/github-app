@@ -7,11 +7,11 @@ data class Repo (
     val description: String,
     val language: String,
     val url: String,
-    val htmlUrl: String,
-    val forksCount: Int,
-    val watchersCount: Int,
-    val stargazersCount: Int,
-    val owner: Owner
+    val htmlUrl: String? = null,
+    val forksCount: Int? = null,
+    val watchersCount: Int? = null,
+    val stargazersCount: Int? = null,
+    val owner: Owner? = null
 )
 
 data class Owner (

@@ -5,4 +5,5 @@
     <color name="colorAccent">#D81B60</color>
 
     <color name="colorLink">#03A9F4</color>
+    <color name="colorDivider">#BBB</color>
 </resources>
