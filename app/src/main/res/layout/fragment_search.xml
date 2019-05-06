@@ -20,7 +20,9 @@
             android:hint="@string/search_repo_name"
             android:background="@drawable/bg_text_field"
             android:layout_margin="12dp"
-            tools:ignore="Autofill" />
+            tools:ignore="Autofill"
+            android:padding="4dp"
+            />
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/repoList"
             android:layout_width="match_parent"
@@ -30,5 +32,11 @@
             tools:listitem="@layout/list_item_repo"
             />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ProgressBar android:id="@+id/progressBar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
 
 </FrameLayout>

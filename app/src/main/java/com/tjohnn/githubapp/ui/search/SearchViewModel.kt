@@ -34,6 +34,9 @@ class SearchViewModel(
             repo.searchRepository(search, currentPage)
                 .subscribeOn(schedulers.io())
                 .observeOn(schedulers.main())
+                .doOnSubscribe { isLoading.postValue(EventWrapper(true)) }
+                .doOnSuccess { isLoading.postValue(EventWrapper(false)) }
+                .doOnError { isLoading.postValue(EventWrapper(false)) }
                 .subscribe({
                     if (currentPage == 1) {
                         repos.value = it.results as MutableList<Repo>
@@ -49,7 +52,7 @@ class SearchViewModel(
 
     }
 
-    fun getSnacBarMessage(): LiveData<EventWrapper<String>> = snackBarMessage
+    fun getSnackBarMessage(): LiveData<EventWrapper<String>> = snackBarMessage
     fun getIsLoading(): LiveData<EventWrapper<Boolean>> = isLoading
     fun getRepos(): LiveData<MutableList<Repo>> = repos
 
