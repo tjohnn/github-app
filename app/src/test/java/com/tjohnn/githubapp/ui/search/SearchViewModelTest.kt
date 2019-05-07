@@ -67,6 +67,6 @@ class SearchViewModelTest {
 
         verify(repo).searchRepository(SEARCH_TEXT, 1)
 
-        assertEquals(searchViewModel.getSnackBarMessage().value?.peekContent(), errorMessage)
+        assertEquals(searchViewModel.getSnackBarMessage().value?.peekContent(), "errorMessage")
     }
 }
