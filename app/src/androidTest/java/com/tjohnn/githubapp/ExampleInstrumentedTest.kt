@@ -1,4 +1,4 @@
-package com.tjohnn.loginapp
+package com.tjohnn.githubapp
 
 import androidx.test.InstrumentationRegistry
 import androidx.test.runner.AndroidJUnit4
