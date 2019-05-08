@@ -30,6 +30,7 @@ android {
         }
         release {
             buildConfigField("String", "API_BASE_URL", apiBaseUrl)
+            signingConfig signingConfigs.config
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
