@@ -103,10 +103,8 @@ workflows:
 #          requires:
 #            - unit-tests
 #            - instrumentation-tests
-      - deploy-internal #:
-#          requires:
-#            - hold
-        filters:
-          branches:
-            only: master
+      - deploy-internal:
+          filters:
+            branches:
+              only: master
 
