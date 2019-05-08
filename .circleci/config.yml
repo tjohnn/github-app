@@ -106,5 +106,5 @@ workflows:
       - deploy-internal:
           filters:
             branches:
-              only: master
+              only: deploy
 
