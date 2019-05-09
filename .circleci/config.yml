@@ -97,7 +97,7 @@ workflows:
   deploy-internal:
     jobs:
       - unit-tests
-      - instrumentation-tests
+      - instrumentation-tests:
           filters:
             branches:
               only: deploy
