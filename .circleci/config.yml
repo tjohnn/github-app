@@ -97,14 +97,22 @@ workflows:
   deploy-internal:
     jobs:
       - unit-tests
-#      - instrumentation-tests
-#      - hold:
-#          type: approval
-#          requires:
-#            - unit-tests
-#            - instrumentation-tests
+      - instrumentation-tests:
+          filters:
+            branches:
+              only: deploy
+      - hold:
+          type: approval
+          filters:
+            branches:
+              only: deploy
+          requires:
+            - unit-tests
+            - instrumentation-tests
       - deploy-internal:
           filters:
             branches:
               only: deploy
+          requires:
+            - hold
 
