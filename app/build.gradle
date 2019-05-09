@@ -66,6 +66,7 @@ dependencies {
         rxandroidVersion = '2.1.0'
 
         mockitoVersion = "2.7.22"
+        espressoVersion = "3.2.0-beta01"
     }
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -122,6 +123,10 @@ dependencies {
 
     testImplementation "org.mockito:mockito-core:$mockitoVersion"
 
-    androidTestImplementation 'androidx.test:runner:1.2.0-alpha05'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0-alpha05'
+    androidTestImplementation "androidx.test:runner:1.2.0-beta01"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espressoVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-contrib:$espressoVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-intents:$espressoVersion"
+    androidTestImplementation "androidx.test.espresso.idling:idling-concurrent:$espressoVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-idling-resource:$espressoVersion"
 }
